@@ -1,0 +1,90 @@
+-Sets only capture unique elemnts.
+-Tuples are imutable, or cannot be altered by the user. 
+-list can be altered. 
+-a single equals sign is for assigning a variable. Double equal signs are used for coparatives.
+- and operator, all conditions need to be true, the OR operatior only requires one. 
+- Python uses if, elif and else
+
+for  item in seq:
+	print(item)
+
+-note that the temporary variable "item" can be anything you want it to be, but you should consider readability. 
+
+#list comprehension example
+
+x = [1,2,3,4]
+out = []
+for num in x:
+	out.append(num**2)
+
+#the above is the same as
+
+[num**2 for num in x]
+
+# the output for both would be [1,4,9,16]
+
+def is for defining a function
+
+def my_func(param1)
+	print(param1)
+
+my_func('hello')
+#out would be the word hello. 
+
+def my_func1(name = 'default')
+if you do not pass a parameter then the fuction will use the default of whatever the parameter is equal to.
+
+def square(num)
+	return num**2
+output = square(2)
+#next call the output
+output
+# 4 would be the output. 
+"""
+mutipule line comment. 
+"""
+#hit shift tab to show the above multi line comment or signature. 
+#this helps with learning function imputs and purpose.
+
+#map() is a built in function in python
+def times2(var):
+	return var *2
+
+seq = [ 2,3,4,5,6]
+map(times2, seq)
+#the above will result in a memory location output.
+list(map(times2,seq))
+# will retuen [4,6,8,10,12]	
+
+#lambda expressions, they are used in functions. 
+list(map(lambda num: num*3, seq))
+this allows you to not formally define the function in the global environment. This willbe used a lot in the pandas library. 
+
+#filter function
+list(filter(lambda num: num%2 == 0, seq))
+#will return only the true items in the sequence that meet the criteria. 
+
+#strings
+s.lower()
+s.upper()
+s.split()
+#will all be used heavily in data science, text analysis in particular.
+
+pop() takes values oout of a list, while append adds a value to the end of a list.
+
+#tuple unpacking.
+x = [(1,2),(3,4),(5,6)]
+#lists of tuples are very common in python.
+for item in x:
+	print(item)
+# (1,2)
+# (3,4)
+# (5,6)
+#would be the output of the above. 
+
+for (a,b) in x:
+	print(b)
+# 2
+# 4
+# 6
+#would be the output. 
