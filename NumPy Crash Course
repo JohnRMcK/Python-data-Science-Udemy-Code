@@ -1,0 +1,64 @@
+Numpy Intro
+
+my_list
+
+import numpy as np
+
+arr = np.array(my_list)
+
+my_mat = [[1,2,3],[6,5,4],[8,7,9]] # will be a matrix
+
+np.array(my_mat)# will turn the list into a matrix.
+
+np.arange(0,10) #will create an array with 0 up to 9.
+np.arange(0,11,2) # will create an array from 0 to ten but only every second number. 
+
+np.zeros(3) #will create a row of 3 zeros
+
+np.zeros ((2,3)) #will create a matrix of zeros with 2 rows and 3 columns.
+
+np.ones() # functions similar to the np.zeros above.
+
+np.linspace(0, 5, 10)
+#takes a 3rd argument of how many points you want. 
+# will create 10 evenly spaced point between 0 and 5 in 1 dimension.
+
+np.eye(4) # creates a 4 row/column identity matrix.
+
+#creating an arry of random numbers
+np.random.rand(5,5)#one of the most popular methods.
+np.random.randn(4,4) samples from a gaussian dist as opposed to a uniform dist like the previous. 
+
+np.random.randint(1,100,25) #25 values between 1 and 100. Upper bound is not included. 
+
+arr = np.arange(25)
+ranarr = np.random.randint(0,50,10) 
+
+arr.reshape(5,5) # will reshape arr into a square matrix. 
+#above function is uesd a lot. 
+
+ranarr.min()
+
+ranarr.max()
+
+ranarr.argmax() # will return the location of the min or max. 
+
+arr.dtype() #will return the data type that your array is comprised of. 
+
+#
+#
+#
+NumPy indexing and selction.
+
+arr = np.arange(0,11)
+
+arr[0:5] # would return all of the values indexed from position 0 up to but not including item 5.
+
+arr[2][4] # would pull the 2nd rows 4th column element. 
+arr[2,4] #would accomplish the same as the above. 
+
+#slicing notation also works
+
+arr[1:3][3:5] #would return a sub matrix. 
+
+arr[:2][1:] @notation would also work. 
